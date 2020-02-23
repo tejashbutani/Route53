@@ -29,6 +29,7 @@ loads.addEventListener("click",function(){
             const mydata=doc.data();
 if (psv==mydata.password) {
   console.log("user logged in");
+  window.open("dashboard.html");
 }else{
   console.log("Wrong Password");
 }
