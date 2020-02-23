@@ -17,10 +17,18 @@
 <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
 
 <script>
-function sendVaues()
+function sendValues()
 {
+var namel = document.getElementById("name").value;
+var agel = document.getElementById("age").value;
+var genderl = document.getElementById("gender").value;
 var emaill = document.getElementById("email").value;
-localStorage.setItem("textvalue",emaill);
+var passwordl = document.getElementById("password").value;
+localStorage.setItem("nameg",namel);
+localStorage.setItem("ageg",agel);
+localStorage.setItem("genderg",genderl);
+localStorage.setItem("emailg",emaill);
+localStorage.setItem("passwordg",passwordl);
 return false;
 }
 </script>
@@ -38,16 +46,19 @@ return false;
     <input type="text" id="gender">
     <p>
     <label for="email">Email address</label>
-    <input type="email" id="email">
+    <input type="email" id="email" required>
     <p>
     <label for="password">Password</label>
     <input type="text" id="password">
     <p>
 
 
-    <form action="login.html" method="get">
-              <button id="threshold" onclick="sendVaues();">Next</button>
+   <form action="signup.html" >
+              <button id="signup" onclick="sendValues();">Next</button>
          </form>
+
+
+
     <!-- <button id="save">Create Profile</button> -->
 <!-- <button id="load">load</button> -->
     <script src="basic_details_js.js"></script>

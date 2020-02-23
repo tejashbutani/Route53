@@ -15,17 +15,14 @@
 
   var firestore=firebase.firestore();
 
-
-
   const name=document.querySelector('#name');
   const age=document.querySelector('#age');
   const gender=document.querySelector('#gender');
   const email=document.querySelector('#email');
   const password=document.querySelector('#password');
 
-  const save=document.querySelector('#save');
-  const load=document.querySelector('#load');
-  const status=document.querySelector('#status');
+  const save=document.querySelector('#signup');
+  const load=document.querySelector('#fetch');
 
   save.addEventListener("click",function(){
 
@@ -52,11 +49,17 @@ console.log("Profile created!!!");
  });
   })
 
+  //
   // load.addEventListener("click",function(){
-  //     docRef.get().then(function(doc){
+  //   docRefs=firestore.doc("Profiles/avinash@gmail.com");
+  //     docRefs.get().then(function(doc){
   //         if(doc && doc.exists){
   //             const mydata=doc.data();
-  //             status.innerText="I love you  "+ mydata.name +" "+mydata.email;
+  //             name.innerText=mydata.name;
+  //             age.innerText=mydata.age;
+  //             gender.innerText=mydata.gender;
+  //             email.innerText=mydata.email;
+  //             password.innerText=mydata.password;
   //         }
   //     }).catch(function(error){
   //         console.log("Got an  error:",error);
