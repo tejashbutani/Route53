@@ -178,12 +178,18 @@ console.log(e);
         rshoulderymodes:rshoulderymode,
        }).then(function(){
            console.log("status Saved!");
+           opendash();
        }).catch(function(error){
        console.log("Got an  error:",error);
        });
 
+
 }
 setTimeout(clearTime10,10000);
+
+function opendash() {
+  window.open("dashboard.html");
+}
 
 // A function to draw the skeletons
 function drawSkeleton() {
