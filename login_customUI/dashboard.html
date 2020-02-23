@@ -7,8 +7,24 @@
   <body>
     <h1>Dashboard</h1>
     <p/>
-  <form action="startsession.html">
+
+    <form action="startsession.html">
             <button type="submit">Start Session</button>
          </form>
+
+         <form action="userprofile.html">
+                 <button type="submit">User profile</button>
+              </form>
+         <h3 id="emailtxt">g</h3>
+         <p/>
+         <h3 id="nametxt">f</h3>
+         <script>
+          var f = localStorage.getItem("named");
+          var g = localStorage.getItem("emaild");
+          document.getElementById("emailtxt").innerText=g;
+          document.getElementById("nametxt").innerText=f;
+         </script>
+
+
   </body>
 </html>

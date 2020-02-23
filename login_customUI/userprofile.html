@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>User Profile</h1>
+    <p/>
+
+         <h3 id="emailtxt">i</h3>
+         <p/>
+         <h3 id="nametxt">f</h3>
+         <p/>
+         <h3 id="agetxt">g</h3>
+         <p/>
+         <h3 id="gendertxt">h</h3>
+         <p/>
+         <script>
+          var f = localStorage.getItem("named");
+          var g = localStorage.getItem("aged");
+          var h = localStorage.getItem("genderd");
+          var i = localStorage.getItem("emaild");
+          document.getElementById("emailtxt").innerText=i;
+          document.getElementById("nametxt").innerText=f;
+          document.getElementById("agetxt").innerText=g;
+          document.getElementById("gendertxt").innerText=h;
+         </script>
+  </body>
+</html>

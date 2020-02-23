@@ -137,6 +137,7 @@ console.log(e);
     var lshoulderymode = SimpleMode(lshoulderylist);
     var rshoulderxmode = SimpleMode(rshoulderxlist);
     var rshoulderymode = SimpleMode(rshoulderylist);
+    var nm,ag,ge,em,nx,ny,lex,ley,rex,rey,lsx,lsy,rsx,rsy;
 
 
     // $("#result").append('NOSE X - ' + nosexmode + '<br>');
@@ -158,6 +159,10 @@ console.log(e);
       password:e,
      }).then(function(){
          console.log("status Saved!");
+         nm = a;
+         ag =b;
+         ge = c;
+         em = d;
      }).catch(function(error){
      console.log("Got an  error:",error);
      });
@@ -178,6 +183,16 @@ console.log(e);
         rshoulderymodes:rshoulderymode,
        }).then(function(){
            console.log("status Saved!");
+           nx =nosexmode;
+           ny = noseymode;
+           lex = leyexmode;
+           ley = leyeymode;
+           rex = reyexmode;
+           rey = reyeymodes;
+           lsx = lshoulderxmode;
+           lsy = lshoulderymode;
+           rsx = rshoulderxmode;
+           rsy = rshoulderymode;
            opendash();
        }).catch(function(error){
        console.log("Got an  error:",error);
@@ -189,6 +204,25 @@ setTimeout(clearTime10,10000);
 
 function opendash() {
   window.open("dashboard.html");
+}
+var nm,ag,ge,em,nx,ny,lex,ley,rex,rey,lsx,lsy,rsx,rsy;
+function sendValues()
+{
+localStorage.setItem("named",nm);
+localStorage.setItem("aged",ag);
+localStorage.setItem("genderd",ge);
+localStorage.setItem("emaild",em);
+localStorage.setItem("nx",nx);
+localStorage.setItem("ny",ny);
+localStorage.setItem("lex",lex);
+localStorage.setItem("ley",ley);
+localStorage.setItem("rex",rex);
+localStorage.setItem("rey",rey);
+localStorage.setItem("lsx",lsx);
+localStorage.setItem("lsy",lsy);
+localStorage.setItem("rsx",rsx);
+localStorage.setItem("rsy",rsy);
+return false;
 }
 
 // A function to draw the skeletons
